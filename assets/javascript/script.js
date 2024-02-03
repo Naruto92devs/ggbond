@@ -7,7 +7,7 @@ navbarToggle.addEventListener("click", () => {
 });
 
 
-var coll = document.getElementsByClassName("question");
+var coll = document.getElementsByClassName("collapsible");
 var i;
 
 for (i = 0; i < coll.length; i++) {
@@ -23,37 +23,6 @@ for (i = 0; i < coll.length; i++) {
 }
 
 
-var swiper = new Swiper(".slide-content", {
-  slidesPerView: 3,
-  spaceBetween: 25,
-  loop: true,
-  centerSlide: 'true',
-  fade: 'true',
-  grabCursor: 'true',
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-    dynamicBullets: true,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-
-  breakpoints:{
-      0: {
-          slidesPerView: 1,
-      },
-      520: {
-          slidesPerView: 2,
-      },
-      950: {
-          slidesPerView: 3,
-      },
-  },
-});
-
-
 // const navbarToggle1 = document.querySelector(".drop");
 // const navbarLinks1 = document.querySelector(".dropdown-content");
 
@@ -64,29 +33,15 @@ var swiper = new Swiper(".slide-content", {
 
 
 
-
-// // JavaScript to enable slider functionality
-// const slider = document.querySelector(".cards-slider");
-// const cards = document.querySelectorAll(".card");
-// const cardWidth = cards[0].clientWidth;
-// const cardMargin = parseInt(getComputedStyle(cards[0]).marginRight);
-// const totalCards = cards.length;
-// const visibleCards = 3;
-// let index = 0;
-
-// function updateSliderPosition() {
-//   slider.style.transform = `translateX(-${(cardWidth + cardMargin) * index}px)`;
+// var dropdowns = document.getElementsByClassName("dropdown");
+// for (var i = 0; i < dropdowns.length; i++) {
+//   dropdowns[i].addEventListener("click", function() {
+//     this.classList.toggle("active");
+//     var dropdownContent = this.querySelector(".dropdown-content");
+//     if (dropdownContent.style.display === "flex") {
+//       dropdownContent.style.display = "none";
+//     } else {
+//       dropdownContent.style.display = "flex";
+//     }
+//   });
 // }
-
-// function slideCards(direction) {
-//   index += direction * visibleCards;
-
-//   if (index < 0) {
-//     index = (totalCards - 3) - (totalCards - 3) % visibleCards;
-//   } else if (index >= totalCards) {
-//     index = 0;
-//   }
-
-//   updateSliderPosition();
-// }
-
